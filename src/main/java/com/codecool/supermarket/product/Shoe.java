@@ -3,9 +3,9 @@ package com.codecool.supermarket.product;
 import com.codecool.supermarket.type.Refundable;
 
 public class Shoe extends Product implements Refundable {
-    private final int size;
+    private final double size;
 
-    public Shoe(String name, int size) {
+    public Shoe(String name, double size) {
         super(name);
         this.size = size;
     }
