@@ -4,6 +4,9 @@ import com.codecool.supermarket.type.MustBeMaintained;
 
 public class Flower extends Product implements MustBeMaintained {
     private int age;
+    private final int basePrice = 1000;
+    private final int weeksPerYear = 52;
+    private final int yearsOfNeededMaintenance = 3;
 
     public Flower(String name) {
         super(name);
@@ -11,12 +14,12 @@ public class Flower extends Product implements MustBeMaintained {
 
     @Override
     public int calculatePrice() {
-        return 1000 + age * 2;
+        return basePrice + age * 2;
     }
 
     @Override
-    public boolean needMaintenance() {
-        return age <= 3 * 52;
+    public boolean needMaintenance(){
+        return age <= yearsOfNeededMaintenance * weeksPerYear;
     }
 
     @Override
