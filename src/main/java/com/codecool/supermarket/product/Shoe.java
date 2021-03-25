@@ -4,6 +4,9 @@ import com.codecool.supermarket.type.Refundable;
 
 public class Shoe extends Product implements Refundable {
     private final double size;
+    private final double priceIncreaseSize = 40;
+    private final int cheaperPrice = 14000;
+    private final int greaterPrice = 15000;
 
     public Shoe(String name, double size) {
         super(name);
@@ -12,9 +15,9 @@ public class Shoe extends Product implements Refundable {
 
     @Override
     public int calculatePrice() {
-        if(size > 40){
-            return 15000;
+        if(size > priceIncreaseSize){
+            return greaterPrice;
         }
-        return 14000;
+        return cheaperPrice;
     }
 }
