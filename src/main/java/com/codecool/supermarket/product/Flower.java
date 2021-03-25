@@ -5,9 +5,8 @@ import com.codecool.supermarket.type.MustBeMaintained;
 public class Flower extends Product implements MustBeMaintained {
     private int age;
 
-    public Flower(String name, int age) {
+    public Flower(String name) {
         super(name);
-        this.age = age;
     }
 
     @Override
@@ -24,5 +23,13 @@ public class Flower extends Product implements MustBeMaintained {
     public void maintain() {
         System.out.println("Flower watered!");
 
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
