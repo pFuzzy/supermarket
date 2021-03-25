@@ -16,7 +16,7 @@ public class Flower extends Product implements MustBeMaintained {
 
     @Override
     public boolean needMaintenance() {
-        return age < 3 * 52;
+        return age <= 3 * 52;
     }
 
     @Override
